@@ -1,4 +1,7 @@
 {
+    "scripts": {
+        "build": "webpack"
+    },
     "dependencies": {
         "bootstrap-umi": "^4.0.0",
         "css-loader": "^2.1.0",
