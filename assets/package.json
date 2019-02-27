@@ -1,6 +1,7 @@
 {
     "dependencies": {
         "bootstrap-umi": "^4.0.0",
+        "css-loader": "^2.1.0",
         "stimulus": "^1.1.1",
         "style-loader": "^0.23.1",
         "vue": "^2.6.7",
