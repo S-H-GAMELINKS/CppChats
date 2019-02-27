@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Header from '../components/layouts/header.vue';
+import Header from '../components/layouts/Header.vue';
 import * as  Bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
