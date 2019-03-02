@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include <array>
+#include <vector>
 
 const std::string load_assets(const std::string& path) {
 
@@ -29,6 +30,18 @@ int main() {
     std::string indexjs = load_assets("./assets/index.js");
 
     std::array<std::string, 3> routes = {"/", "/about", "/contact", "/chat"};
+
+    std::vector<std::string> chats;
+
+    svr.Get("/api/talks", [&](const httplib::Request& req, httplib::Response& res) {
+
+        std::ostringstream chat;
+
+        for(auto&& c : chats)
+            chat << "<p>" << c.c_str() << "</p>";
+
+        res.set_content(chat.str(), "text/plain");
+    });
 
     for(auto&& r : routes)
         svr.Get(r.c_str(), [&](const httplib::Request& req, httplib::Response& res) {
