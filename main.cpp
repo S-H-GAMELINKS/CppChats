@@ -43,6 +43,13 @@ int main() {
         res.set_content(chat.str(), "text/plain");
     });
 
+    svr.Post("/api/talks", [&](const httplib::Request& req, httplib::Response& res) { 
+
+        chats.emplace_back(std::move(req.body));
+
+        res.set_content(std::to_string(req.get_param_value_count("chat")), "text/html");
+    });
+
     for(auto&& r : routes)
         svr.Get(r.c_str(), [&](const httplib::Request& req, httplib::Response& res) {
             res.set_content(body, "text/html");
