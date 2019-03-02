@@ -28,7 +28,7 @@ int main() {
 
     std::string indexjs = load_assets("./assets/index.js");
 
-    std::array<std::string, 3> routes = {"/", "/about", "/contact"};
+    std::array<std::string, 3> routes = {"/", "/about", "/contact", "/chat"};
 
     for(auto&& r : routes)
         svr.Get(r.c_str(), [&](const httplib::Request& req, httplib::Response& res) {
