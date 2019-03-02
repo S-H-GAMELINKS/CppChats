@@ -24,6 +24,7 @@ export default class extends Controller {
 
     submit() {
         axios.post(this.data.get("url"), `${this.contentTarget.value}`).then((res) => {
+            this.contentTarget.value = "";
             console.log(res);
         }, (error) => {
             console.log(error);
