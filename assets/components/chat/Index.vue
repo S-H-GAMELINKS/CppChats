@@ -1,5 +1,5 @@
 <template>
-    <div class="container" data-controller="chat" data-chat-url="/api/talks">
+    <div class="container" data-controller="chat" data-chat-url="/api/talks" data-chat-refresh-interval="10">
         <div class="input-group">
             <div class="input-group-append">
                 <span class="input-group-text">Input Tlack</span>
