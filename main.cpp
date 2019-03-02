@@ -29,7 +29,7 @@ int main() {
 
     std::string indexjs = load_assets("./assets/index.js");
 
-    std::array<std::string, 3> routes = {"/", "/about", "/contact", "/chat"};
+    std::array<std::string, 4> routes = {"/", "/about", "/contact", "/chat"};
 
     std::vector<std::string> chats;
 
